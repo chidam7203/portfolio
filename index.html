@@ -8,20 +8,34 @@
     <!-- box icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><i class='bx bxs-user'></i></a>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Portfolio</a>
+        </div>
+        <ul>
 
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+        <div class="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            
+        </div>
+    </nav>
+    
+
     <!-- home section -->
     <section class="home" id="home">
         <div class="home-content">
@@ -40,20 +54,20 @@
                 <a href="resume.pdf" class="btn">Download CV</a>
         </div>
         <div class="home-img">
-            <img src="logo/piccc2.jpg" alt="home-img">
+            <img src="piccc2.jpg" alt="home-img">
         </div>
     </section>
 
     <!-- about section -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="logo/piccc2.jpg" alt="about-img">
+            <img src="piccc2.jpg" alt="about-img">
         </div>
         <div class="about-content">
             <h2>About <span>Me</span></h2>
             <h3>Frontend Developer</h3>
             <p>A developer portfolio is a website that showcases your best work,
-                personality and talents. It is your best chance to prove your skills, 
+                personality and talents. It is your best hance to prove your skills, 
                 share your enthusiasm about the profession and give your potential employers 
                 and clients a glimpse of how awesome it would be to work 
                 with you.</p>
@@ -101,7 +115,7 @@
 
     <div class="portfolio-container">
         <div class="portfolio-box">
-            <img src="logo/portfolio1.jpg" alt="project-img">
+            <img src="portfolio1.jpg" alt="project-img">
             <div class="portfolio-layer">
                 <h3>Portfolio Website</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -111,7 +125,7 @@
         </div>
 
         <div class="portfolio-box">
-            <img src="logo/portfolio2.jpg" alt="project-img">
+            <img src="portfolio2.jpg" alt="project-img">
             <div class="portfolio-layer">
                 <h3>Travel planer</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -121,17 +135,16 @@
         </div>
 
         <div class="portfolio-box">
-            <img src="logo/portfolio3.jpg" alt="project-img">
+            <img src="portfolio3.jpg" alt="project-img">
             <div class="portfolio-layer">
                 <h3>E-commerce website</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Ab cumque voluptas corrupti animi!</p>
-                <a href="https://www.littletags.com/?gad_source=5&gclid=EAIaIQobChMI7LbQlrLsgwMVVaNmAh2FEQ05EAAYASAAEgLcvfD_BwE"><i class='bx bx-window-open'></i></a>
+                <p>Interior style,furniture website</p>
+                <a href="https://chidam7203.github.io/Interior-style/"><i class='bx bx-window-open'></i></a>
             </div>
         </div>
 
         <div class="portfolio-box">
-            <img src="logo/portfolio4.jpg" alt="project-img">
+            <img src="portfolio4.jpg" alt="project-img">
             <div class="portfolio-layer">
                 <h3>Portfolio Website</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -141,7 +154,7 @@
         </div>
 
         <div class="portfolio-box">
-            <img src="logo/portfolio5.jpg" alt="project-img">
+            <img src="portfolio5.jpg" alt="project-img">
             <div class="portfolio-layer">
                 <h3>Portfolio Website</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -152,7 +165,7 @@
 
 
         <div class="portfolio-box">
-            <img src="logo/portfolio6.jpg" alt="project-img">
+            <img src="portfolio6.jpg" alt="project-img">
             <div class="portfolio-layer">
                 <h3>Portfolio Website</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -184,4 +197,12 @@
         </form>
     </section>
 </body>
+
+<script>
+    const menu = document.querySelector('.menu')
+    const menuList = document.querySelector('nav ul')
+    menu.addEventListener('click',()=>{
+        menuList.classList.toggle('showmenu')
+    })
+</script>
 </html>
