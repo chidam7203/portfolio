@@ -32,7 +32,7 @@ section{
     padding: 10rem 9% 2rem ;
 }
 
-.header{
+/* .header{
     position: fixed;
     top: 0;
     left: 0;
@@ -43,16 +43,54 @@ section{
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+} */
+
+.navbar{
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color:white
+}
+.navbar li a{
+    color: var(--text-color);
 }
 
-.logo{
-    font-size: 2.5rem;
+.navbar li{
+    display: inline-block;
+    margin:0 10px
+    
+}
+a{
+    text-decoration: none;
+}
+.logo a{
+    font-size: 3.5rem;
     color:var(--text-color);
     font-weight: 600;
 
 }
+.menu-line{
+    height:3px;
+    width:20px;
+    background-color: darkslateblue;
+    margin-bottom: 3px;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
 
 .navbar a{
+    transition: 3s;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+} 
+
+/* .navbar a{
     font-size: 1.6rem;
     color:var(--text-color);
     margin-left: 4rem;
@@ -60,7 +98,7 @@ section{
 }
 .navbar a:hover{
     color: var(--main-color);
-}
+} */
 
 
 .home{
@@ -141,15 +179,15 @@ span{
     from{transform:translateX(-500px);}
 }
 
-/* .home-img img{
+.home-img img{
     animation-name: home-image;
     animation-duration: 4s;
     animation-iteration-count: initial;
 }
-@keyframes home-img{
-    from{transform: translateX(1366px);}
-    to{transform: translateX(1000px);}
-} */
+@keyframes home-image{
+    from{transform: translateX(600px);}
+    /* to{transform: translateX(1000px);} */
+}
 
 
 
@@ -314,20 +352,50 @@ span{
         grid-template-rows: auto;
     }
     .navbar{
-        font-size:0.5rem;
+        flex-direction: column;
     }
+    .navbar li{
+        display:block;
+    }
+    ul{
+        text-align: center;
+        padding: 0;
+        display: none;
+    }
+    .logo{
+        align-self: flex-start;
+        margin: 10px 0px 0px 25px;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+    }
+    .showmenu{
+        display: block;
+    }
+    
+
+    /* .navbar{
+        font-size:0.5rem;
+    } */
     .home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:3rem;
         flex-direction: column;
     }
     .about{
         flex-direction: column;
     }
-    .logo{
+    /* .logo{
         font-size: 1.5rem;  
     }
     .navbar a{
         margin-left: 0.4rem;
-    }
+    } */
     .home-img img{
         display: none;
         
@@ -380,7 +448,7 @@ span{
         font-size: 2rem;
         color: var(--second-bg-color);
     }
-    .navbar a{
+    /* .navbar a{
         margin-left: 1rem;
-    }
+    } */
 }
